@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    background: #000;
+}
+
+@keyframes hoverAnimation{
+    0%{
+        background: #000;
+        
+    }
+
+    100%{
+        box-shadow: 0 0px 10px 10px cornflowerblue;
+        background: cornflowerblue;
+        
+    }
+}
+
+ @keyframes borderAnimation{
+     0%{
+        border-left-color: rgb(137, 189, 241);
+     }
+
+     25%{
+        border-left-color: rgb(137, 189, 241);
+        border-top-color: rgb(137, 189, 241);
+     }
+
+     50%{
+        border-left-color: rgb(137, 189, 241);
+        border-top-color: rgb(137, 189, 241);
+        border-right-color: rgb(137, 189, 241);
+     }
+
+     75%{
+        border-left-color: rgb(137, 189, 241);
+        border-top-color: rgb(137, 189, 241);
+        border-right-color: rgb(137, 189, 241);
+        border-bottom-color: rgb(137, 189, 241);
+     }
+
+     100%{
+        border-left-color: rgb(137, 189, 241);
+        border-top-color: rgb(137, 189, 241);
+        border-right-color: rgb(137, 189, 241);
+        border-bottom-color: rgb(137, 189, 241);
+     }
+}
+
+
+.btn{
+    position: relative;
+    top: 40px;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    background: #000;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.btn:hover{
+    animation-name: hoverAnimation, borderAnimation;
+    animation-duration: 2s, 1.5s;
+    animation-iteration-count: 1, infinite;
+    animation-timing-function: 0, ease;
+    animation-direction: 0, alternate;
+    animation-fill-mode: forwards;
+    border: 2px solid #000;
+}
+
+@keyframes bounce{
+    0%{ 
+        height: 5px;
+        border-radius: 50px 50px 25px 25px;
+        transform: scaleX(1.7);
+
+    }
+
+    40%{
+        height: 20px;
+        border-radius: 50%;
+        transform: scaleX(1);
+    }
+
+    100%{
+        top: 10px;
+    }
+}
+
+@keyframes colors{
+   10%{
+       background: fuchsia;
+   }
+
+   20%{
+       background: greenyellow;
+   }
+
+   30%{
+       background: mediumblue;
+   }
+
+   40%{
+      background: firebrick;  
+   }
+
+   50%{
+        background: gold;
+   }
+
+   60%{
+        background: palegreen;
+   }
+}
+
+/* @keyframes two{
+    from{
+        transform: translateY(50px);
+    }
+
+    to{
+
+    }
+} */
+
+
+.ball{
+    position: relative;
+    top: 100px;
+    left: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    background: dodgerblue;
+
+    animation-name: bounce, colors;
+    animation-duration: 0.5s, 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+#two{
+    animation-delay: 0.1s;
+}
+
+#three{
+    animation-delay: 0.2s;
+}
